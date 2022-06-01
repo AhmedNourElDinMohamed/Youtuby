@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TARBOUN</title>
+    <link rel="stylesheet" href="css/bootstrap-rtl.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body class="bg-light mt-5 rtl">
+    <div class="layer"></div>
+    <div id="top-menu">
+      <div class="container-fluid">
+        <!--Nav bar-->
+        <nav
+          class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top rtl py-3"
+          style="z-index: 4"
+        >
+          <i class="fas fa-bars fa-lg" id="toggler"></i>
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="img/tarboun-logo.jpg"
+              alt="channel logo"
+              class="rounded-circle my-2 mr-3"
+              width="40px"
+            />TARBOUN</a
+          >
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-lg-auto">
+              <li class="nav-item active">
+                <a class="nav-link px-3" href="index.html"
+                  >الفيديوهات المقترحة</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3 ml-lg-3" href="#">المرفوعه حديثاً</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#">ألفيديوهات الرائجة</a>
+              </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="البحث"
+              />
+              <button
+                onclick="location.href ='search.html';"
+                class="btn btn-outline-danger my-2 my-sm-0"
+                type="submit"
+              >
+                البحث
+              </button>
+            </div>
+          </div>
+          <i class="fas fa-search mr-4 search-icon"></i>
+          <a
+            class="nav-link login ml-3"
+            href="#"
+            data-toggle="modal"
+            data-target="#loginModal"
+            >تسجيل الدخول</a
+          >
+        </nav>
+        <input type="search" class="form-control search-input" placeholder="إبحث عن..">
+        <!--End Nav bar-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="email" class="col-form-label"
+                      >البريد الإلكتروني:</label
+                    >
+                    <input type="email" class="form-control" id="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="col-form-label"
+                      >كلمة المرور:</label
+                    >
+                    <input type="password" class="form-control" id="password" />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="login">نسيت كلمة المرور</a>
+                <a href="#" class="mx-auto login">إنشاء حساب</a>
+                <button type="button" class="btn btn-primary">دخول</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ico Bars List -->
+        <div class="row pt-4">
+          <div id="wrap">
+            <div class="sidebar">
+              <ul class="list-group list-group-flush pl-0">
+                <a
+                  href="index.html"
+                  class="list-group-item list-group-item-action"
+                >
+                  <i class="fas fa-home mr-2 purple"></i> الصفحة الرئيسية
+                </a>
+                <a
+                  href="index.html"
+                  class="list-group-item list-group-item-action"
+                >
+                  <i class="fab fa-algolia mr-2 purple"></i> الفيديوهات المقترحة
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <i class="far fa-plus-square mr-2 purple"></i> المرفوعة حديثًا
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <i class="fas fa-fire-alt mr-2 purple"></i> الفيديوهات الرائجة
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <i class="fas fa-fire-alt mr-2 purple"></i> فيديوهاتي
+                </a>
+                <a
+                  href="log.html"
+                  class="list-group-item list-group-item-action"
+                >
+                  <i class="fas fa-history mr-2 purple"></i> سجل المشاهدة
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <i class="far fa-share-square mr-2 purple"></i> الإشتراكات
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <i class="fas fa-film mr-2 purple"></i> الأفلام والعروض
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <i class="fas fa-gamepad mr-2 purple"></i> ألعاب فيديو
+                </a>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <i class="fas fa-cog mr-2 purple"></i> الإعدادات
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <i class="fas fa-question-circle mr-2 purple"></i> مساعدة
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action pb-4"
+                >
+                  صالح &copy; تربون
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Modal -->
+
+        <!-------------------Page Body------------------->
+
+        <!-- Start Cards-->
+        <div class="content m-4">
+          <h4 class="py-5">الفيديوهات المقترحه</h4>
+          <div class="row">
+            <!--Card 1-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun1.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>9:20</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      فتح رويال باس موسم 15، RP 100 وقبل فرحه درع المليون مع
+                      تربون🔥❤️
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 707,000 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل اسبوع</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 2-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun2.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>9:20</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      بكجات M24 بقيمة 33000$ جنون الحظ مع تربون😂 شوف البدايه!
+                      PUBG MOBILE
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span>919,844 مشاهدة</span><br />
+                    <i class="fas fa-clock"></i><span> قبل 4 أسابيع</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 3-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun3.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>10:00</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      اول مره الحظ يضرب معايا، حظ تربون اسطوري😂🔥الاهلي
+                      والزمالك!
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 1,064,159 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل 1 شهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 4-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun4.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>12:00</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      عملت كمين واتعملي كمين، سولو سكواد الابطال مع تربون😂🔥
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 1,020,877 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل 1 شهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 5-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun5.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>12:00</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      تفتيح بكجات صناديق Wild fever وتهنئة رايقة بمناسبه العيد😍
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 532,562 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل 1 شهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 6-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun6.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>5:00</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      تفتيح بكجات صناديق الكلاسيك الجديده 15.000$،تجربة مشروبات
+                      الواحة🍹
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 799,023 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل 2 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 7-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun7.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>5:18</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      تربون سولو سكواد الأبطال،و جمال الانترو الجديد🔥❤️
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 1,217,623 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل 3 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 8-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun8.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>5:00</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      تربون وصحابه اكبر تحالف في ببجي موبايل سيرفر تربون😂🔥
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 788,287 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل 3 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 9-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun9.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>5:20</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      عجلة الحظ وثغرة تربون السالكه..صدمة النهاية😂
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 571,060 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل 4 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 10-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun10.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>6:00</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      اخر سكواد ضدي،جنون تربون الفايت الاخير😱
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 714,519 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل 5 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 11-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun11.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>1:00</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      لو انت بتلعب بهاك ف انا حريف فليكات!!🔥😱
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 559,237 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل 6 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+            <!--Card 12-->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="card p-1 mb-4">
+                <div class="card-icons">
+                  <a href="watch.html"
+                    ><img
+                      src="img/thumbnail/tarboun12.jpg"
+                      class="card-img-top"
+                      alt="card image"
+                    />
+                    <time>8:00</time>
+                    <i class="fas fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-0">
+                    <p class="card-title">
+                      تفتيح بكجات الجوكر 28000 شده مع تربون - السر في
+                      فيكتور!😱🔥
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <i class="fas fa-film"></i><span> 2,072,885 مشاهدة</span
+                    ><br />
+                    <i class="fas fa-clock"></i><span> قبل 5 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-img">
+                  <img
+                    src="img/tarboun-logo.jpg"
+                    alt="channel logo"
+                    class="rounded-circle my-2 ml-3"
+                    width="30px"
+                  />
+                  <span class="card-text">TARBOUN</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--End Cards-->
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/50cdd5c4de.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
